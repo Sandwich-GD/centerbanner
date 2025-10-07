@@ -13,3 +13,5 @@ then it multiplies it by however many to put it into EXACTLY the middle.
 Alr i dont wanna type any more so yah.
 
 W dad, for helping me, W chatGPT for helping me AND dad.
+
+OH SHOOT ONE LAST THING: the script is made in hungarian so if you want an english version tell me and with enough tell me's i will post one.
