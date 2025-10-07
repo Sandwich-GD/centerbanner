@@ -1,0 +1,21 @@
+#!/bin/bash
+
+text="$(figlet "$@")"
+
+txtmag=$(<<<"$text" wc -l)
+txtszel=$(<<<"$text" wc -L)
+
+read termmag termszel <<<$(stty size)
+
+fentsor=$(( ($termmag/2)-($txtmag/2) ))
+baloszl=$(( ($termszel/2)-($txtszel/2) ))
+
+sorok=$(printf '%*s' "$fentsor" "")
+sorok="${sorok// /$'\n'}"
+oszlopok=$(printf '%*s' "$baloszl" "")
+
+clear
+<<<"$sorok" cat
+<<<"$text" sed "s/^/$oszlopok/"
+
+read
